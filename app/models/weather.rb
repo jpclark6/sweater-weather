@@ -27,7 +27,19 @@ class Weather
     current[:summary]
   end
 
-  def time(days_in_future = 0)
+  def current_time
+    current[:time]
+  end
+
+  def hourly_time(hours_in_future = 0)
+    hourly[:data][hours_in_future][:time]
+  end
+
+  def hourly_temperature(hours_in_future = 0)
+    hourly[:data][hours_in_future][:temperature]
+  end
+
+  def daily_time(days_in_future = 0)
     daily[:data][days_in_future][:time]
   end
 
@@ -48,13 +60,17 @@ class Weather
   end
 
   def humidity(days_in_future = 0)
-    daily[:data][days_in_future][:summary]
+    daily[:data][days_in_future][:humidity]
   end
 
   private
 
   def current
     @data[:currently]
+  end
+
+  def hourly
+    @data[:hourly]
   end
 
   def daily
