@@ -4,7 +4,7 @@ describe 'darksky api' do
   it 'exists' do
     lat_lng = "39.7392358,-104.990251"
     darksky = DarkskyService.new(lat_lng)
-    expect(darksky.class).to eq(DarkskyService)
+    expect(darksky).to be_instance_of(DarkskyService)
   end
 
   it 'can get a weather forecast' do
