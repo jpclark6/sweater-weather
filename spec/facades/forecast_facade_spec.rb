@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'as a forecast facade' do
-  it 'can parse out current weather' do
+  it 'can parse out current weather', :vcr do
     lat_lng = "39.7392358,-104.990251"
     weather = ForecastFacade.new(lat_lng).weather
     expect(weather.current_temp).to be_between(-10, 105).inclusive
@@ -11,15 +11,16 @@ describe 'as a forecast facade' do
     expect(weather.current_uv_index).to be_between(0, 10).inclusive
     expect(weather.current_status).to be_instance_of(String)
   end
-  it 'can tell you the high, low, and daily description' do
+  it 'can tell you the high, low, and daily description', :vcr do
     lat_lng = "39.7392358,-104.990251"
     weather = ForecastFacade.new(lat_lng).weather
-    expect(weather.high).to be_between(-10, 105)
-    expect(weather.low).to be_between(-10, 105)
+    expect(weather.high).to be_between(-10, 105).inclusive
+    expect(weather.low).to be_between(-10, 105).inclusive
     expect(weather.status).to be_instance_of(String)
     expect(weather.tonight_status).to be_instance_of(String)
+    expect(weather.time).to be_between(1550848000, 1750948000).inclusive
   end
-  it 'can give you the weekly forecast' do
+  it 'can give you the weekly forecast', :vcr do
     lat_lng = "39.7392358,-104.990251"
     weather = ForecastFacade.new(lat_lng).weather
     expect(weather.status(1)).to be_instance_of(String)

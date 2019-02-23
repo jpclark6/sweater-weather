@@ -27,6 +27,10 @@ class Weather
     current[:summary]
   end
 
+  def time(days_in_future = 0)
+    daily[:data][days_in_future][:time]
+  end
+
   def high(days_in_future = 0)
     daily[:data][days_in_future][:temperatureHigh]
   end
