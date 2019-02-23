@@ -65,6 +65,13 @@
         null,
         null
       ],
+      "/Users/jus/turing/3module/projects/sweater-weather/app/services/darksky_service.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jus/turing/3module/projects/sweater-weather/app/mailers/application_mailer.rb": [
         0,
         0,
@@ -97,6 +104,6 @@
         0
       ]
     },
-    "timestamp": 1550882017
+    "timestamp": 1550882685
   }
 }
