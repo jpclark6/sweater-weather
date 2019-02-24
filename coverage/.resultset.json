@@ -231,6 +231,13 @@
         null,
         null
       ],
+      "/Users/jus/turing/3module/projects/sweater-weather/app/services/flickr_service.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jus/turing/3module/projects/sweater-weather/app/mailers/application_mailer.rb": [
         0,
         0,
@@ -263,6 +270,6 @@
         0
       ]
     },
-    "timestamp": 1550951505
+    "timestamp": 1550970377
   }
 }
