@@ -8,6 +8,14 @@ class GeocodeFacade
     "#{location[:lat]},#{location[:lng]}"
   end
 
+  def lat
+    location[:lat]
+  end
+
+  def lng
+    location[:lng]
+  end
+
   def location
     service.lat_lng[:results][0][:geometry][:location]
   end
