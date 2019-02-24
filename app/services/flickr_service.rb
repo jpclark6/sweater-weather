@@ -1,6 +1,7 @@
 class FlickrService
   def initialize(city_state)
     geo = GeocodeFacade.new(city_state)
+    @city_state = city_state
     @lat = geo.lat
     @lng = geo.lng
   end
@@ -12,11 +13,19 @@ class FlickrService
     get_json('', params)[:photos][:photo].sample[:id]
   end
 
-  def find_picture_url(id)
-    params = {method: 'flickr.photos.getSizes', photo_id: id}
-
-    x = get_json('', params)
-    binding.pry
+  def find_picture_url
+    if Location.find_by(city_state: @city_state) && Location.find_by(city_state: @city_state).background_url
+      url = Location.find_by(city_state: @city_state).background_url
+    else
+      loc = Location.find_or_create_by(city_state: @city_state)
+      params = {method: 'flickr.photos.getSizes', photo_id: find_picture_id}
+      url = ''
+      until url[-3..-1] == 'jpg'
+        url = get_json('', params)[:sizes][:size][-1][:source]
+      end
+      loc.update(background_url: url)
+    end
+    url
   end
 
 

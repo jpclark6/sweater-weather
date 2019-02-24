@@ -5,15 +5,27 @@ class GeocodeFacade
   end
 
   def lat_lng
-    "#{location[:lat]},#{location[:lng]}"
+    "#{lat},#{lng}"
   end
 
   def lat
-    location[:lat]
+    if Location.find_by(city_state: @city_state) && Location.find_by(city_state: @city_state).lat
+      Location.find_by(city_state: @city_state).lat
+    else
+      loc = Location.find_or_create_by(city_state: @city_state)
+      loc.update(lat: location[:lat])
+      loc.lat
+    end
   end
 
   def lng
-    location[:lng]
+    if Location.find_by(city_state: @city_state) && Location.find_by(city_state: @city_state).lng
+      Location.find_by(city_state: @city_state).lng
+    else
+      loc = Location.find_or_create_by(city_state: @city_state)
+      loc.update(lng: location[:lng])
+      loc.lng
+    end
   end
 
   def location
