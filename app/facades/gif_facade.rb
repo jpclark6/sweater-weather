@@ -1,11 +1,12 @@
 class GifFacade 
-  def initialize(weather_description)
-    @weather_description = weather_description
+  def initialize(image_description)
+    @image_description = image_description
     @_search_results = nil
   end
 
   def get_gif
-    search_results[:data][0][:images][:original][:url]
+    random_image_data = search_results[:data].sample
+    random_image_data[:images][:original][:url]
   end
 
   private
@@ -15,6 +16,6 @@ class GifFacade
   end
 
   def service
-    GiphyService.new(@weather_description)
+    GiphyService.new(@image_description)
   end
 end

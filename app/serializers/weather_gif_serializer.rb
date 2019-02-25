@@ -1,6 +1,5 @@
 class WeatherGifSerializer
-  def self.make_json(city_state)
-    weather_gifs = WeatherGifFacade.new(city_state).build_days
+  def self.make_json(weather_gifs)
     { 
       data: {images: weather_gifs},
       copyright: "2019"

@@ -1,7 +1,7 @@
 class WeatherGif
   def initialize(weather, day)
-    @day = day
     @weather = weather
+    @day = day
   end
 
   def time
