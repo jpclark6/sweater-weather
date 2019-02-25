@@ -1,6 +1,17 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/jus/turing/3module/projects/sweater-weather/app/controllers/api/v1/gifs_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/jus/turing/3module/projects/sweater-weather/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
       "/Users/jus/turing/3module/projects/sweater-weather/app/mailers/application_mailer.rb": [
         0,
         0,
@@ -184,10 +195,6 @@
         0,
         0
       ],
-      "/Users/jus/turing/3module/projects/sweater-weather/app/controllers/application_controller.rb": [
-        0,
-        0
-      ],
       "/Users/jus/turing/3module/projects/sweater-weather/app/controllers/api/v1/forecasts_controller.rb": [
         0,
         0,
@@ -263,6 +270,6 @@
         0
       ]
     },
-    "timestamp": 1551111352
+    "timestamp": 1551111453
   }
 }
