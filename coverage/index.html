@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-25T11:05:22-07:00">2019-02-25T11:05:22-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-25T11:07:35-07:00">2019-02-25T11:07:35-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         8.85
+         8.99
        </span>
     </span> hits/line)
   </h2>
@@ -127,7 +127,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>16.0</td>
+        <td>17.0</td>
       </tr>
       
       <tr>
@@ -237,7 +237,7 @@
         <td>13</td>
         <td>13</td>
         <td>0</td>
-        <td>17.8</td>
+        <td>18.8</td>
       </tr>
       
       <tr>
@@ -632,7 +632,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         8.77
+         9.02
        </span>
     </span> hits/line)
   </h2>
@@ -684,7 +684,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>16.0</td>
+        <td>17.0</td>
       </tr>
       
       <tr>
@@ -734,7 +734,7 @@
         <td>13</td>
         <td>13</td>
         <td>0</td>
-        <td>17.8</td>
+        <td>18.8</td>
       </tr>
       
       <tr>
@@ -1311,14 +1311,14 @@
           <code class="ruby">  def initialize(image_description)</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="3">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="33" data-linenumber="3">
+          <span class="hits">33</span>
           
           <code class="ruby">    @image_description = image_description</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="4">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="33" data-linenumber="4">
+          <span class="hits">33</span>
           
           <code class="ruby">    @_search_results = nil</code>
         </li>
@@ -1341,14 +1341,14 @@
           <code class="ruby">  def get_gif</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="8">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="33" data-linenumber="8">
+          <span class="hits">33</span>
           
           <code class="ruby">    random_image_data = search_results[:data].sample</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="9">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="33" data-linenumber="9">
+          <span class="hits">33</span>
           
           <code class="ruby">    random_image_data[:images][:original][:url]</code>
         </li>
@@ -1383,8 +1383,8 @@
           <code class="ruby">  def search_results</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="15">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="33" data-linenumber="15">
+          <span class="hits">33</span>
           
           <code class="ruby">    @_search_results ||= service.weather_gif</code>
         </li>
@@ -1407,8 +1407,8 @@
           <code class="ruby">  def service</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="19">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="33" data-linenumber="19">
+          <span class="hits">33</span>
           
           <code class="ruby">    GiphyService.new(@image_description)</code>
         </li>
@@ -2780,8 +2780,8 @@
           <code class="ruby">  def initialize(weather_description)</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="3">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="35" data-linenumber="3">
+          <span class="hits">35</span>
           
           <code class="ruby">    @weather_description = weather_description</code>
         </li>
@@ -2804,8 +2804,8 @@
           <code class="ruby">  def weather_gif</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="7">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="34" data-linenumber="7">
+          <span class="hits">34</span>
           
           <code class="ruby">    get_json(&quot;/v1/gifs/search&quot;, {q: @weather_description})</code>
         </li>
@@ -2840,8 +2840,8 @@
           <code class="ruby">  def get_json(url, params)</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="13">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="34" data-linenumber="13">
+          <span class="hits">34</span>
           
           <code class="ruby">    response = conn.get(url, params)</code>
         </li>
@@ -2852,8 +2852,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="15">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="34" data-linenumber="15">
+          <span class="hits">34</span>
           
           <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
         </li>
@@ -2876,20 +2876,20 @@
           <code class="ruby">  def conn</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="19">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="34" data-linenumber="19">
+          <span class="hits">34</span>
           
           <code class="ruby">    Faraday.new(url: &#39;https://api.giphy.com&#39;) do |faraday|</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="20">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="34" data-linenumber="20">
+          <span class="hits">34</span>
           
           <code class="ruby">      faraday.params[:api_key] = ENV[&#39;GIPHY_API_KEY&#39;]</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="21">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="34" data-linenumber="21">
+          <span class="hits">34</span>
           
           <code class="ruby">      faraday.adapter Faraday.default_adapter</code>
         </li>

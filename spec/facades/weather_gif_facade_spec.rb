@@ -6,6 +6,7 @@ describe 'getting weather gifs based on location' do
     weather_gif_facade = WeatherGifFacade.new(city_state)
     expect(weather_gif_facade).to be_instance_of(WeatherGifFacade)
   end
+
   it 'can build weather gif objects', :vcr do
     city_state = 'denver,co'
     weather_gif_by_day = WeatherGifFacade.new(city_state).build_days
@@ -17,6 +18,7 @@ describe 'getting weather gifs based on location' do
     expect(weather_gif_by_day[0][:time]).to be_instance_of(Integer)
     expect(weather_gif_by_day[0][:summary]).to be_instance_of(String)
   end
+  
   it 'can build weather gif objects for other cities', :vcr do
     city_state = 'miami,fl'
     weather_gif_by_day = WeatherGifFacade.new(city_state).build_days
