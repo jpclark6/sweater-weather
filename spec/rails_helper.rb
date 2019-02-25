@@ -15,6 +15,10 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.configure_rspec_metadata!
   config.filter_sensitive_data("<GOOGLE_API_KEY>") { ENV['GOOGLE_API_KEY'] }
+  config.filter_sensitive_data("<DARKSKY_API_KEY>") { ENV['DARKSKY_API_KEY'] }
+  config.filter_sensitive_data("<FLICKR_API_KEY>") { ENV['FLICKR_API_KEY'] }
+  config.filter_sensitive_data("<FLICKR_API_SECRET>") { ENV['FLICKR_API_SECRET'] }
+  config.filter_sensitive_data("<GIPHY_API_KEY>") { ENV['GIPHY_API_KEY'] }
   config.allow_http_connections_when_no_cassette = true
 end
 
