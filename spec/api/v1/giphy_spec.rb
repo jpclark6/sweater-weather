@@ -7,7 +7,6 @@ describe 'getting giphy images' do
     expect(response).to be_successful
 
     data = JSON.parse(response.body, symbolize_names: true)
-    binding.pry
 
     expect(data[:data].keys).to include(:images)
     expect(data[:data][:images][0].keys).to include(:time)
