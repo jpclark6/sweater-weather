@@ -1,10 +1,32 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/jus/turing/3module/projects/sweater-weather/app/facades/gif_facade.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jus/turing/3module/projects/sweater-weather/app/services/giphy_service.rb": [
         1,
         1,
-        2,
+        1,
         null,
         null,
         1,
@@ -226,6 +248,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/Users/jus/turing/3module/projects/sweater-weather/app/helpers/application_helper.rb": [
@@ -296,6 +319,6 @@
         0
       ]
     },
-    "timestamp": 1551112380
+    "timestamp": 1551112787
   }
 }
