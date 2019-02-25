@@ -1,6 +1,5 @@
 class Api::V1::GifsController < ApplicationController
   def index
-    gifs = 
-    render json: {'test' => 'test'}
+    render json: WeatherGifSerializer.make_json(params[:location])
   end
 end
