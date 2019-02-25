@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-25T11:07:35-07:00">2019-02-25T11:07:35-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-25T11:18:31-07:00">2019-02-25T11:18:31-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         8.99
+         9.0
        </span>
     </span> hits/line)
   </h2>
@@ -127,7 +127,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>17.0</td>
+        <td>17.2</td>
       </tr>
       
       <tr>
@@ -632,7 +632,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         9.02
+         9.05
        </span>
     </span> hits/line)
   </h2>
@@ -684,7 +684,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>17.0</td>
+        <td>17.2</td>
       </tr>
       
       <tr>
@@ -1311,14 +1311,14 @@
           <code class="ruby">  def initialize(image_description)</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="3">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="34" data-linenumber="3">
+          <span class="hits">34</span>
           
           <code class="ruby">    @image_description = image_description</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="4">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="34" data-linenumber="4">
+          <span class="hits">34</span>
           
           <code class="ruby">    @_search_results = nil</code>
         </li>
@@ -1386,7 +1386,7 @@
         <li class="covered" data-hits="33" data-linenumber="15">
           <span class="hits">33</span>
           
-          <code class="ruby">    @_search_results ||= service.weather_gif</code>
+          <code class="ruby">    @_search_results ||= service.gif_data</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -2777,13 +2777,13 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  def initialize(weather_description)</code>
+          <code class="ruby">  def initialize(image_description)</code>
         </li>
       
         <li class="covered" data-hits="35" data-linenumber="3">
           <span class="hits">35</span>
           
-          <code class="ruby">    @weather_description = weather_description</code>
+          <code class="ruby">    @image_description = image_description</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -2801,13 +2801,13 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">  def weather_gif</code>
+          <code class="ruby">  def gif_data</code>
         </li>
       
         <li class="covered" data-hits="34" data-linenumber="7">
           <span class="hits">34</span>
           
-          <code class="ruby">    get_json(&quot;/v1/gifs/search&quot;, {q: @weather_description})</code>
+          <code class="ruby">    get_json(&quot;/v1/gifs/search&quot;, {q: @image_description})</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">

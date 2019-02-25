@@ -1,10 +1,10 @@
 class GiphyService
-  def initialize(weather_description)
-    @weather_description = weather_description
+  def initialize(image_description)
+    @image_description = image_description
   end
 
-  def weather_gif
-    get_json("/v1/gifs/search", {q: @weather_description})
+  def gif_data
+    get_json("/v1/gifs/search", {q: @image_description})
   end
 
   private

@@ -12,7 +12,7 @@ class GifFacade
   private
 
   def search_results
-    @_search_results ||= service.weather_gif
+    @_search_results ||= service.gif_data
   end
 
   def service
