@@ -12,13 +12,13 @@ describe 'flickr service' do
     id = flickr.find_picture_id
     expect(id.to_i.to_s.length).to be > 1
   end
-  it 'finds a url for a picture of the city, state', :vcr do
+  it 'finds a url for a picture of the city, and state' do
     city_state = 'denver,co'
     flickr = FlickrService.new(city_state)
     url = flickr.find_picture_url
     expect(url).to include('flickr.com')
   end
-  it 'finds a url for a picture of a different city, state', :vcr do
+  it 'finds a url for a picture of a different city, state' do
     city_state = 'new york,ny'
     flickr = FlickrService.new(city_state)
     url = flickr.find_picture_url
