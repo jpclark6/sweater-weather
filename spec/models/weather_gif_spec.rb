@@ -13,4 +13,13 @@ describe 'weather gif' do
     expect(weather_gif.gif).to include('gif')
     expect(weather_gif.summary).to be_instance_of(String)
   end
+
+  it 'returns time, gif, and summary for other location', :vcr do
+    lat_lng = "40.753817,-111.893347"
+    weather = ForecastFacade.new(lat_lng).weather
+    weather_gif = WeatherGif.new(weather, 2)
+    expect(weather_gif.time).to be_instance_of(Integer)
+    expect(weather_gif.gif).to include('gif')
+    expect(weather_gif.summary).to be_instance_of(String)
+  end
 end
