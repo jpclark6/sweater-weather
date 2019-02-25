@@ -3,8 +3,8 @@ require 'rails_helper'
 describe 'getting a gif' do
   it 'exists' do
     weather_description = "Partly cloudy throughout the day."
-    gif = GifFacade.new(weather_description)
-    expect(gif).to be_instance_of(GifFacade)
+    gif_facade = GifFacade.new(weather_description)
+    expect(gif_facade).to be_instance_of(GifFacade)
   end
 
   it 'can get a gif based on weather', :vcr do

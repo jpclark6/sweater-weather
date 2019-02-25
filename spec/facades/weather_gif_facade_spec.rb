@@ -12,10 +12,10 @@ describe 'getting weather gifs based on location' do
     weather_gif_by_day = WeatherGifFacade.new(city_state).build_days
     expect(weather_gif_by_day).to be_instance_of(Array)
     expect(weather_gif_by_day[0][:url]).to include('.gif')
-    expect(weather_gif_by_day[0][:time]).to be_instance_of(Integer)
+    expect(weather_gif_by_day[0][:time].to_i).to be > 1
     expect(weather_gif_by_day[0][:summary]).to be_instance_of(String)
     expect(weather_gif_by_day[0][:url]).to include('.gif')
-    expect(weather_gif_by_day[0][:time]).to be_instance_of(Integer)
+    expect(weather_gif_by_day[0][:time].to_i).to be > 1
     expect(weather_gif_by_day[0][:summary]).to be_instance_of(String)
   end
   
@@ -24,10 +24,10 @@ describe 'getting weather gifs based on location' do
     weather_gif_by_day = WeatherGifFacade.new(city_state).build_days
     expect(weather_gif_by_day).to be_instance_of(Array)
     expect(weather_gif_by_day[0][:url]).to include('.gif')
-    expect(weather_gif_by_day[0][:time]).to be_instance_of(Integer)
+    expect(weather_gif_by_day[0][:time].to_i).to be > 1
     expect(weather_gif_by_day[0][:summary]).to be_instance_of(String)
     expect(weather_gif_by_day[0][:url]).to include('.gif')
-    expect(weather_gif_by_day[0][:time]).to be_instance_of(Integer)
+    expect(weather_gif_by_day[0][:time].to_i).to be > 1
     expect(weather_gif_by_day[0][:summary]).to be_instance_of(String)
   end
 end

@@ -7,7 +7,7 @@ class WeatherGifFacade
   def build_days
     (0..6).map do |day|
       gif_data = WeatherGif.new(@weather, day)
-      {time: gif_data.time, summary: gif_data.summary, url: gif_data.gif}
+      {time: gif_data.time.to_s, summary: gif_data.summary, url: gif_data.gif}
     end
   end
 end
