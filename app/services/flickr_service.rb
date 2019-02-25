@@ -6,11 +6,15 @@ class FlickrService
     @lng = geo.lng
   end
 
-  def find_picture_id
+  def picture_data
     params = {lat: @lat, lon: @lng, accuracy: 11, tags: 'skyline,sunset',
               method: 'flickr.photos.search', tag_mode: 'all'}
 
-    get_json('', params)[:photos][:photo].sample[:id]
+    get_json('', params)
+  end
+
+  def find_picture_id
+    picture_data[:photos][:photo].sample[:id]
   end
 
   def find_picture_url
