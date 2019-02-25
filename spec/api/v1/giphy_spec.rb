@@ -10,6 +10,7 @@ describe 'getting giphy images' do
 
     expect(data[:data].keys).to include(:images)
     expect(data[:data][:images][0].keys).to include(:time)
+    expect(data[:data][:images][0][:time].to_i).to be > 1
     expect(data[:data][:images][0].keys).to include(:summary)
     expect(data[:data][:images][0].keys).to include(:url)
     expect(data[:data][:images][0][:url]).to include('.gif')
