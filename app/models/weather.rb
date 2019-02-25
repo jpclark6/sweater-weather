@@ -3,32 +3,68 @@ class Weather
     @data = data
   end
 
+  def current
+    { 
+      time: current_time,
+      temperature: current_temp,
+      feels_like: current_feels_like,
+      humidity: current_humidity,
+      visibility: current_visibility_mi,
+      uv_index: current_uv_index,
+      description: current_status
+    }
+  end
+
+  def hourly_weather
+    hourly_forecast = []
+    24.times do |hour|
+      hourly_forecast[hour] = {
+                                time: hourly_time(hour),
+                                temperature: hourly_temperature(hour)
+                              }
+    end
+  end
+
+  def daily_weather
+    daily_forecast = []
+    7.times do |day|
+      daily[day] = {
+                    time: daily_time(day),
+                    high: high(day),
+                    low: low(day),
+                    status: status(day),
+                    tonight_status: tonight_status(day),
+                    humidity: humidity(day),
+                   }
+    end
+  end
+
   def current_temp
-    current[:temperature]
+    currently[:temperature]
   end
 
   def current_feels_like
-    current[:apparentTemperature]
+    currently[:apparentTemperature]
   end
 
   def current_humidity
-    current[:humidity]
+    currently[:humidity]
   end
 
   def current_visibility_mi
-    current[:visibility]
+    currently[:visibility]
   end
 
   def current_uv_index
-    current[:uvIndex]
+    currently[:uvIndex]
   end
 
   def current_status
-    current[:summary]
+    currently[:summary]
   end
 
   def current_time
-    current[:time]
+    currently[:time]
   end
 
   def hourly_time(hours_in_future = 0)
@@ -65,7 +101,7 @@ class Weather
 
   private
 
-  def current
+  def currently
     @data[:currently]
   end
 

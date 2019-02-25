@@ -21,9 +21,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sun, 24 Feb 2019 17:09:10 GMT
+      - Mon, 25 Feb 2019 18:48:27 GMT
       Expires:
-      - Mon, 25 Feb 2019 17:09:10 GMT
+      - Tue, 26 Feb 2019 18:48:27 GMT
       Cache-Control:
       - public, max-age=86400
       Vary:
@@ -39,7 +39,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=10
+      - gfet4t7; dur=33
       Alt-Svc:
       - quic=":443"; ma=2592000; v="44,43,39"
     body:
@@ -105,7 +105,7 @@ http_interactions:
            "status" : "OK"
         }
     http_version: 
-  recorded_at: Sun, 24 Feb 2019 17:09:10 GMT
+  recorded_at: Mon, 25 Feb 2019 18:48:24 GMT
 - request:
     method: get
     uri: https://maps.googleapis.com/maps/api/geocode/json?address=denver,co&key=<GOOGLE_API_KEY>
@@ -127,9 +127,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sun, 24 Feb 2019 17:09:11 GMT
+      - Mon, 25 Feb 2019 18:48:27 GMT
       Expires:
-      - Mon, 25 Feb 2019 17:09:11 GMT
+      - Tue, 26 Feb 2019 18:48:27 GMT
       Cache-Control:
       - public, max-age=86400
       Vary:
@@ -145,7 +145,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=27
+      - gfet4t7; dur=14
       Alt-Svc:
       - quic=":443"; ma=2592000; v="44,43,39"
     body:
@@ -211,10 +211,10 @@ http_interactions:
            "status" : "OK"
         }
     http_version: 
-  recorded_at: Sun, 24 Feb 2019 17:09:10 GMT
+  recorded_at: Mon, 25 Feb 2019 18:48:24 GMT
 - request:
     method: get
-    uri: https://api.flickr.com/services/rest/?accuracy=11&api_key=ef34a73484f542e3d4cd0d309536c746&format=json&lat=39.7392358&lon=-104.990251&method=flickr.photos.search&safe_search=1&tag_mode=all&tags=skyline,sunset
+    uri: https://api.flickr.com/services/rest/?accuracy=11&api_key=<FLICKR_API_KEY>&format=json&lat=39.7392358&lon=-104.990251&method=flickr.photos.search&safe_search=1&tag_mode=all&tags=skyline,sunset
     body:
       encoding: US-ASCII
       string: ''
@@ -231,7 +231,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 24 Feb 2019 17:09:11 GMT
+      - Mon, 25 Feb 2019 18:48:27 GMT
       Content-Type:
       - text/javascript; charset=utf-8
       Content-Length:
@@ -243,7 +243,7 @@ http_interactions:
       Cache-Control:
       - private
       X-Served-By:
-      - www60.flickr.bf1.yahoo.com
+      - www322.flickr.bf1.yahoo.com
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
@@ -251,8 +251,8 @@ http_interactions:
       Age:
       - '0'
       Via:
-      - http/1.1 fts101.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
-        e10.ycpi.dnb.yahoo.com (ApacheTrafficServer [cMsSf ])
+      - http/1.1 fts114.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
+        e9.ycpi.cha.yahoo.com (ApacheTrafficServer [cMsSf ])
       Server:
       - ATS
       Referrer-Policy:
@@ -376,5 +376,5 @@ http_interactions:
         Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"19345779","owner":"84916450@N00","secret":"58c6e3f2f4","server":"14","farm":1,"title":"Millenium
         Bridge & Denver Skyline","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"})'
     http_version: 
-  recorded_at: Sun, 24 Feb 2019 17:09:11 GMT
+  recorded_at: Mon, 25 Feb 2019 18:48:25 GMT
 recorded_with: VCR 4.0.0

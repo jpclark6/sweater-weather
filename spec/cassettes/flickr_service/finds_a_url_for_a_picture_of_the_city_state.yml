@@ -21,9 +21,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sun, 24 Feb 2019 17:09:11 GMT
+      - Mon, 25 Feb 2019 18:48:28 GMT
       Expires:
-      - Mon, 25 Feb 2019 17:09:11 GMT
+      - Tue, 26 Feb 2019 18:48:28 GMT
       Cache-Control:
       - public, max-age=86400
       Vary:
@@ -39,7 +39,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=11
+      - gfet4t7; dur=28
       Alt-Svc:
       - quic=":443"; ma=2592000; v="44,43,39"
     body:
@@ -105,7 +105,7 @@ http_interactions:
            "status" : "OK"
         }
     http_version: 
-  recorded_at: Sun, 24 Feb 2019 17:09:11 GMT
+  recorded_at: Mon, 25 Feb 2019 18:48:25 GMT
 - request:
     method: get
     uri: https://maps.googleapis.com/maps/api/geocode/json?address=denver,co&key=<GOOGLE_API_KEY>
@@ -127,9 +127,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sun, 24 Feb 2019 17:09:12 GMT
+      - Mon, 25 Feb 2019 18:48:28 GMT
       Expires:
-      - Mon, 25 Feb 2019 17:09:12 GMT
+      - Tue, 26 Feb 2019 18:48:28 GMT
       Cache-Control:
       - public, max-age=86400
       Vary:
@@ -145,7 +145,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=72
+      - gfet4t7; dur=17
       Alt-Svc:
       - quic=":443"; ma=2592000; v="44,43,39"
     body:
@@ -211,10 +211,10 @@ http_interactions:
            "status" : "OK"
         }
     http_version: 
-  recorded_at: Sun, 24 Feb 2019 17:09:11 GMT
+  recorded_at: Mon, 25 Feb 2019 18:48:26 GMT
 - request:
     method: get
-    uri: https://api.flickr.com/services/rest/?accuracy=11&api_key=ef34a73484f542e3d4cd0d309536c746&format=json&lat=39.7392358&lon=-104.990251&method=flickr.photos.search&safe_search=1&tag_mode=all&tags=skyline,sunset
+    uri: https://api.flickr.com/services/rest/?accuracy=11&api_key=<FLICKR_API_KEY>&format=json&lat=39.7392358&lon=-104.990251&method=flickr.photos.search&safe_search=1&tag_mode=all&tags=skyline,sunset
     body:
       encoding: US-ASCII
       string: ''
@@ -231,7 +231,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 24 Feb 2019 17:09:12 GMT
+      - Mon, 25 Feb 2019 18:48:29 GMT
       Content-Type:
       - text/javascript; charset=utf-8
       Content-Length:
@@ -243,16 +243,16 @@ http_interactions:
       Cache-Control:
       - private
       X-Served-By:
-      - www307.flickr.bf1.yahoo.com
+      - www-bm001.flickr.bf1.yahoo.com
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Accept-Encoding
       Age:
-      - '0'
+      - '2'
       Via:
-      - http/1.1 fts101.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
-        e10.ycpi.dnb.yahoo.com (ApacheTrafficServer [cMsSf ])
+      - http/1.1 fts125.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
+        e20.ycpi.cha.yahoo.com (ApacheTrafficServer [cMsSf ])
       Server:
       - ATS
       Referrer-Policy:
@@ -376,10 +376,10 @@ http_interactions:
         Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"19345779","owner":"84916450@N00","secret":"58c6e3f2f4","server":"14","farm":1,"title":"Millenium
         Bridge & Denver Skyline","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"})'
     http_version: 
-  recorded_at: Sun, 24 Feb 2019 17:09:11 GMT
+  recorded_at: Mon, 25 Feb 2019 18:48:26 GMT
 - request:
     method: get
-    uri: https://api.flickr.com/services/rest/?api_key=ef34a73484f542e3d4cd0d309536c746&format=json&method=flickr.photos.getSizes&photo_id=28511693136&safe_search=1
+    uri: https://api.flickr.com/services/rest/?api_key=<FLICKR_API_KEY>&format=json&method=flickr.photos.getSizes&photo_id=6602776499&safe_search=1
     body:
       encoding: US-ASCII
       string: ''
@@ -396,11 +396,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 24 Feb 2019 17:09:12 GMT
+      - Mon, 25 Feb 2019 18:48:29 GMT
       Content-Type:
       - text/javascript; charset=utf-8
       Content-Length:
-      - '449'
+      - '409'
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
@@ -408,7 +408,7 @@ http_interactions:
       Cache-Control:
       - private
       X-Served-By:
-      - www312.flickr.bf1.yahoo.com
+      - www300.flickr.bf1.yahoo.com
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
@@ -416,8 +416,8 @@ http_interactions:
       Age:
       - '0'
       Via:
-      - http/1.1 fts118.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
-        e12.ycpi.dnb.yahoo.com (ApacheTrafficServer [cMsSf ])
+      - http/1.1 fts126.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
+        e13.ycpi.cha.yahoo.com (ApacheTrafficServer [cMsSf ])
       Server:
       - ATS
       Referrer-Policy:
@@ -441,13 +441,10 @@ http_interactions:
         report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-hpkp-report-only"
     body:
       encoding: ASCII-8BIT
-      string: jsonFlickrApi({"sizes":{"canblog":0,"canprint":0,"candownload":0,"size":[{"label":"Square","width":75,"height":75,"source":"https:\/\/farm9.staticflickr.com\/8869\/28511693136_f25f47f2a4_s.jpg","url":"https:\/\/www.flickr.com\/photos\/cnhoffman\/28511693136\/sizes\/sq\/","media":"photo"},{"label":"Large
-        Square","width":"150","height":"150","source":"https:\/\/farm9.staticflickr.com\/8869\/28511693136_f25f47f2a4_q.jpg","url":"https:\/\/www.flickr.com\/photos\/cnhoffman\/28511693136\/sizes\/q\/","media":"photo"},{"label":"Thumbnail","width":"100","height":"75","source":"https:\/\/farm9.staticflickr.com\/8869\/28511693136_f25f47f2a4_t.jpg","url":"https:\/\/www.flickr.com\/photos\/cnhoffman\/28511693136\/sizes\/t\/","media":"photo"},{"label":"Small","width":"240","height":"180","source":"https:\/\/farm9.staticflickr.com\/8869\/28511693136_f25f47f2a4_m.jpg","url":"https:\/\/www.flickr.com\/photos\/cnhoffman\/28511693136\/sizes\/s\/","media":"photo"},{"label":"Small
-        320","width":"320","height":240,"source":"https:\/\/farm9.staticflickr.com\/8869\/28511693136_f25f47f2a4_n.jpg","url":"https:\/\/www.flickr.com\/photos\/cnhoffman\/28511693136\/sizes\/n\/","media":"photo"},{"label":"Medium","width":"500","height":"375","source":"https:\/\/farm9.staticflickr.com\/8869\/28511693136_f25f47f2a4.jpg","url":"https:\/\/www.flickr.com\/photos\/cnhoffman\/28511693136\/sizes\/m\/","media":"photo"},{"label":"Medium
-        640","width":"640","height":"480","source":"https:\/\/farm9.staticflickr.com\/8869\/28511693136_f25f47f2a4_z.jpg","url":"https:\/\/www.flickr.com\/photos\/cnhoffman\/28511693136\/sizes\/z\/","media":"photo"},{"label":"Medium
-        800","width":"800","height":600,"source":"https:\/\/farm9.staticflickr.com\/8869\/28511693136_f25f47f2a4_c.jpg","url":"https:\/\/www.flickr.com\/photos\/cnhoffman\/28511693136\/sizes\/c\/","media":"photo"},{"label":"Large","width":"1024","height":"768","source":"https:\/\/farm9.staticflickr.com\/8869\/28511693136_f25f47f2a4_b.jpg","url":"https:\/\/www.flickr.com\/photos\/cnhoffman\/28511693136\/sizes\/l\/","media":"photo"},{"label":"Large
-        1600","width":"1600","height":1199,"source":"https:\/\/farm9.staticflickr.com\/8869\/28511693136_4697126dc6_h.jpg","url":"https:\/\/www.flickr.com\/photos\/cnhoffman\/28511693136\/sizes\/h\/","media":"photo"},{"label":"Large
-        2048","width":"2048","height":1535,"source":"https:\/\/farm9.staticflickr.com\/8869\/28511693136_2f420e926d_k.jpg","url":"https:\/\/www.flickr.com\/photos\/cnhoffman\/28511693136\/sizes\/k\/","media":"photo"}]},"stat":"ok"})
+      string: jsonFlickrApi({"sizes":{"canblog":0,"canprint":0,"candownload":1,"size":[{"label":"Square","width":75,"height":75,"source":"https:\/\/farm8.staticflickr.com\/7157\/6602776499_23e1d7f4d7_s.jpg","url":"https:\/\/www.flickr.com\/photos\/nathanf\/6602776499\/sizes\/sq\/","media":"photo"},{"label":"Large
+        Square","width":"150","height":"150","source":"https:\/\/farm8.staticflickr.com\/7157\/6602776499_23e1d7f4d7_q.jpg","url":"https:\/\/www.flickr.com\/photos\/nathanf\/6602776499\/sizes\/q\/","media":"photo"},{"label":"Thumbnail","width":"100","height":"67","source":"https:\/\/farm8.staticflickr.com\/7157\/6602776499_23e1d7f4d7_t.jpg","url":"https:\/\/www.flickr.com\/photos\/nathanf\/6602776499\/sizes\/t\/","media":"photo"},{"label":"Small","width":"240","height":"160","source":"https:\/\/farm8.staticflickr.com\/7157\/6602776499_23e1d7f4d7_m.jpg","url":"https:\/\/www.flickr.com\/photos\/nathanf\/6602776499\/sizes\/s\/","media":"photo"},{"label":"Small
+        320","width":"320","height":213,"source":"https:\/\/farm8.staticflickr.com\/7157\/6602776499_23e1d7f4d7_n.jpg","url":"https:\/\/www.flickr.com\/photos\/nathanf\/6602776499\/sizes\/n\/","media":"photo"},{"label":"Medium","width":"500","height":"333","source":"https:\/\/farm8.staticflickr.com\/7157\/6602776499_23e1d7f4d7.jpg","url":"https:\/\/www.flickr.com\/photos\/nathanf\/6602776499\/sizes\/m\/","media":"photo"},{"label":"Medium
+        640","width":"640","height":"427","source":"https:\/\/farm8.staticflickr.com\/7157\/6602776499_23e1d7f4d7_z.jpg","url":"https:\/\/www.flickr.com\/photos\/nathanf\/6602776499\/sizes\/z\/","media":"photo"},{"label":"Large","width":"1024","height":"683","source":"https:\/\/farm8.staticflickr.com\/7157\/6602776499_23e1d7f4d7_b.jpg","url":"https:\/\/www.flickr.com\/photos\/nathanf\/6602776499\/sizes\/l\/","media":"photo"},{"label":"Original","width":"5160","height":"3440","source":"https:\/\/farm8.staticflickr.com\/7157\/6602776499_c824b50856_o.jpg","url":"https:\/\/www.flickr.com\/photos\/nathanf\/6602776499\/sizes\/o\/","media":"photo"}]},"stat":"ok"})
     http_version: 
-  recorded_at: Sun, 24 Feb 2019 17:09:12 GMT
+  recorded_at: Mon, 25 Feb 2019 18:48:27 GMT
 recorded_with: VCR 4.0.0
