@@ -21,40 +21,5 @@ describe 'getting giphy images' do
     expect(data[:data][:images][6][:url]).to include('.gif')
 
     expect(data[:copyright]).to eq('2019')
-
-#     {
-#   data: {
-#     images: [
-#       {
-#         time: "1541487600",
-#         summary: "Mostly sunny in the morning.",
-#         url: "<GIPHY_URL_GOES_HERE>"
-#       },
-#       {
-#         time: "1541127600",
-#         summary: "Partly cloudy in the evening.",
-#         url: "<GIPHY_URL_GOES_HERE>"
-#       },
-#       {
-#         time: "2381487600",
-#         summary: "Snowy.",
-#         url: "<GIPHY_URL_GOES_HERE>"
-#       },
-#       {
-#         time: "1541487600",
-#         summary: "Firenado",
-#         url: "<GIPHY_URL_GOES_HERE>"
-#       },
-#       {
-#         time: "1541487600",
-#         summary: "Corgis because I cant think of other weather",
-#         url: "<GIPHY_URL_GOES_HERE>"
-#       }
-#     ]     
-#   }
-#   copyright: "2019"
-# }
-
-#     `/api/v1/gifs?location=denver,co`
   end
 end
