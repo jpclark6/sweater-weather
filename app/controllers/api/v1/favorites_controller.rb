@@ -19,6 +19,19 @@ class Api::V1::FavoritesController < ApplicationController
     end
   end
 
+  def destroy
+    city_state = format_city_state(params[:location])
+    user = User.find_by(api_key: params[:api_key])
+    location = user.locations.find_by(city_state: city_state) if user
+    if user && location
+      json = FavoritesSerializer.make_individual_json(user, format_city_state(params[:location]))
+      user.locations.destroy(location.id)
+      render json: json
+    else
+      render json: { "status": "Something went wrong" }, status: 401
+    end
+  end
+
   private
 
   def format_city_state(city_state)
