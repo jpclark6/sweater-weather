@@ -7,7 +7,7 @@ describe 'as a giphy service' do
     expect(gif).to be_instance_of(GiphyService)
   end
 
-  it 'returns a json object when called for' do
+  it 'returns a json object when called for', :vcr do
     weather_description = "Partly cloudy throughout the day."
     gif = GiphyService.new(weather_description)
     data = gif.gif_data
