@@ -5,7 +5,7 @@ class Api::V1::FavoritesController < ApplicationController
       user.locations << Location.find_or_create_by(city_state: params[:location].downcase.delete(" "))
       render json: { status: 'Favorite added successfully' }
     else
-      render json: { status: 'Something went wrong.'}
+      render json: { status: 'Something went wrong.'}, status: 401
     end
   end
 end
