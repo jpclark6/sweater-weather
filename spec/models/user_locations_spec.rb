@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe UserLocation do
   describe 'relationships' do
-    it { belongs_to :user }
-    it { belongs_to :location }
+    it { should belong_to :user }
+    it { should belong_to :location }
   end
 end
