@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'as a user' do
-  it 'can delete favorites' do
+  it 'can delete favorites', :vcr do
     email = 'example@example.com'
     password = 'password'
     api_key = 'abc123'
@@ -19,7 +19,7 @@ describe 'as a user' do
     expect(data[:data][0][:current_weather][:currently][:temperature]).to be_between(-10, 115).inclusive
   end
 
-  it 'errors out if wrong api key' do
+  it 'errors out if wrong api key', :vcr do
     email = 'example@example.com'
     password = 'password'
     api_key = 'abc123'
@@ -34,7 +34,7 @@ describe 'as a user' do
     expect(data[:status]).to eq('Something went wrong')
   end
 
-  it 'errors out if no api key' do
+  it 'errors out if no api key', :vcr do
     email = 'example@example.com'
     password = 'password'
     api_key = 'abc123'
@@ -49,7 +49,7 @@ describe 'as a user' do
     expect(data[:status]).to eq('Something went wrong')
   end
 
-  it 'errors out if wrong city given' do
+  it 'errors out if wrong city given', :vcr do
     email = 'example@example.com'
     password = 'password'
     api_key = 'abc123'
