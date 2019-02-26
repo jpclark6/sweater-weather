@@ -3,9 +3,8 @@ require 'rails_helper'
 describe 'as a visitor' do
   it 'can get a successful call to the forecast endpoint', :vcr do
     get '/api/v1/forecast?location=denver,co'
+    
     expect(response).to be_successful
-
-
     data = JSON.parse(response.body, symbolize_names: true)
     expect(data[:data].keys).to eq([:currently, :hourly, :daily])
     expect(data[:data][:currently].keys).to eq([:time, :temperature, :feels_like, :humidity, :visibility, :uv_index, :description])
