@@ -1,7 +1,7 @@
 class ForecastSerializer
   def self.make_json(city_state)
     forecast = ForecastFacade.new(lat_lng(city_state)).weather
-    { data: [currently: forecast.current, hourly: forecast.hourly_weather, daily: forecast.daily_weather] }
+    { data: {currently: forecast.current, hourly: forecast.hourly_weather, daily: forecast.daily_weather} }
   end
 
   def self.lat_lng(city_state)
