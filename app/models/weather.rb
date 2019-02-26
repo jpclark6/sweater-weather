@@ -23,12 +23,13 @@ class Weather
                                 temperature: hourly_temperature(hour)
                               }
     end
+    hourly_forecast
   end
 
   def daily_weather
     daily_forecast = []
     7.times do |day|
-      daily[day] = {
+      daily_forecast[day] = {
                     time: daily_time(day),
                     high: high(day),
                     low: low(day),
@@ -37,6 +38,7 @@ class Weather
                     humidity: humidity(day),
                    }
     end
+    daily_forecast
   end
 
   def current_temp
