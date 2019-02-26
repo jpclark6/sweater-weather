@@ -8,4 +8,8 @@ class Api::V1::FavoritesController < ApplicationController
       render json: { status: 'Something went wrong.'}, status: 401
     end
   end
+
+  def index
+    binding.pry
+  end
 end
