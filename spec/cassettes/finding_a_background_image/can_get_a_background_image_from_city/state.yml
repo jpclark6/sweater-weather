@@ -1,0 +1,453 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=denver,co&key=<GOOGLE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 26 Feb 2019 03:29:28 GMT
+      Expires:
+      - Wed, 27 Feb 2019 03:29:28 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '448'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=433
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="44,43,39"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7392358,
+                       "lng" : -104.990251
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJzxcfI6qAa4cR1jaKJ_j0jhE",
+                 "types" : [ "locality", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 26 Feb 2019 03:29:26 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=denver,co&key=<GOOGLE_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 26 Feb 2019 03:29:28 GMT
+      Expires:
+      - Wed, 27 Feb 2019 03:29:28 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '448'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=16
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="44,43,39"
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7392358,
+                       "lng" : -104.990251
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJzxcfI6qAa4cR1jaKJ_j0jhE",
+                 "types" : [ "locality", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 26 Feb 2019 03:29:26 GMT
+- request:
+    method: get
+    uri: https://api.flickr.com/services/rest/?accuracy=11&api_key=<FLICKR_API_KEY>&format=json&lat=39.7392358&lon=-104.990251&method=flickr.photos.search&safe_search=1&tag_mode=all&tags=skyline,sunset
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 26 Feb 2019 03:29:29 GMT
+      Content-Type:
+      - text/javascript; charset=utf-8
+      Content-Length:
+      - '4319'
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www251.flickr.bf1.yahoo.com
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding
+      Age:
+      - '2'
+      Via:
+      - http/1.1 fts106.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
+        e26.ycpi.cha.yahoo.com (ApacheTrafficServer [cMsSf ])
+      Server:
+      - ATS
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=15552000
+      Expect-Ct:
+      - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Public-Key-Pins-Report-Only:
+      - max-age=2592000; pin-sha256="2fRAUXyxl4A1/XHrKNBmc8bTkzA7y4FB/GLJuNAzCqY=";
+        pin-sha256="I/Lt/z7ekCWanjD0Cvj5EqXls2lOaThEA0H2Bg4BT/o="; pin-sha256="Wd8xe/qfTwq3ylFNd3IpaqLHZbh2ZNCLluVzmeNkcpw=";
+        pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="; pin-sha256="i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY=";
+        pin-sha256="r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E="; pin-sha256="uUwZgwDOxcBXrQcntwu+kYFpkiVkOaezL0WYEZ3anJc=";
+        pin-sha256="dolnbtzEBnELx/9lOEQ22e6OZO/QNb6VSSX2XHA3E7A="; includeSubdomains;
+        report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-hpkp-report-only"
+    body:
+      encoding: ASCII-8BIT
+      string: 'jsonFlickrApi({"photos":{"page":1,"pages":1,"perpage":250,"total":"113","photo":[{"id":"44449423242","owner":"52755911@N03","secret":"6d94b83536","server":"1857","farm":2,"title":"Late
+        Afternoon Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"40231956504","owner":"23691269@N05","secret":"319465a0ab","server":"797","farm":1,"title":"DENVER,
+        COLORADO","ispublic":1,"isfriend":0,"isfamily":0},{"id":"38611838055","owner":"20286982@N07","secret":"b9dac8a698","server":"4601","farm":5,"title":"City
+        Park Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"27642880369","owner":"20286982@N07","secret":"db51dea867","server":"4682","farm":5,"title":"Sundown","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36888308761","owner":"58776235@N00","secret":"859a7866c3","server":"4430","farm":5,"title":"City
+        Park at Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36415992875","owner":"59362904@N07","secret":"fe063af0a5","server":"4382","farm":5,"title":"Denver
+        Cityscape","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36279457571","owner":"59362904@N07","secret":"49fae78b63","server":"4383","farm":5,"title":"Speer
+        Blvd","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36415992485","owner":"59362904@N07","secret":"9c7ea294a5","server":"4352","farm":5,"title":"Busy
+        City Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36279456531","owner":"59362904@N07","secret":"86aa3c3b07","server":"4380","farm":5,"title":"Denver
+        Speed","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36279455611","owner":"59362904@N07","secret":"8c4ce4325b","server":"4380","farm":5,"title":"Sloan
+        Lake","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36415991675","owner":"59362904@N07","secret":"285815b653","server":"4386","farm":5,"title":"Skyline
+        and Stadiums","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36415990795","owner":"59362904@N07","secret":"18be364748","server":"4376","farm":5,"title":"Elitch
+        Gardens at Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36019431820","owner":"59362904@N07","secret":"36a008b07b","server":"4432","farm":5,"title":"Denver
+        Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36371014256","owner":"59362904@N07","secret":"81a7826e44","server":"4419","farm":5,"title":"Pepsi
+        Center","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36019428510","owner":"59362904@N07","secret":"a95db6a3c0","server":"4393","farm":5,"title":"Skyline
+        Reflections","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36019427810","owner":"59362904@N07","secret":"126780f20c","server":"4420","farm":5,"title":"Speer
+        Blvd and Platte River","ispublic":1,"isfriend":0,"isfamily":0},{"id":"36299469935","owner":"28665107@N00","secret":"628b8a0b67","server":"4312","farm":5,"title":"Western
+        Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"34788059303","owner":"35946983@N00","secret":"61927c8aff","server":"4066","farm":5,"title":"Denver
+        skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"34035776381","owner":"23002449@N02","secret":"b8bc5e1d7c","server":"2854","farm":3,"title":"Cloudy
+        Sunset with fisheye","ispublic":1,"isfriend":0,"isfamily":0},{"id":"33899848056","owner":"153564766@N05","secret":"bfb68881db","server":"3736","farm":4,"title":"Denver
+        Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"33532372465","owner":"23002449@N02","secret":"5a769c2494","server":"3666","farm":4,"title":"Denver
+        Skyline nighttime from Speer and Zuni","ispublic":1,"isfriend":0,"isfamily":0},{"id":"30264728421","owner":"23002449@N02","secret":"776195dde2","server":"5800","farm":6,"title":"Denver
+        skyline from Sloan''s Lake Park","ispublic":1,"isfriend":0,"isfamily":0},{"id":"29593346744","owner":"23742495@N07","secret":"4a3a974076","server":"5456","farm":6,"title":"City
+        Park HDR","ispublic":1,"isfriend":0,"isfamily":0},{"id":"29772770101","owner":"33215734@N04","secret":"f43b2544af","server":"8124","farm":9,"title":"Sunset
+        at Sloan''s Lake 2","ispublic":1,"isfriend":0,"isfamily":0},{"id":"28641390260","owner":"37372968@N06","secret":"4b756c1d53","server":"8333","farm":9,"title":"Lower
+        Downtown Denver with Pink Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"28511693136","owner":"33215734@N04","secret":"f25f47f2a4","server":"8869","farm":9,"title":"Sunset
+        at Sloan''s Lake","ispublic":1,"isfriend":0,"isfamily":0},{"id":"19861398641","owner":"127578127@N06","secret":"2866570c35","server":"446","farm":1,"title":"Into
+        the Night","ispublic":1,"isfriend":0,"isfamily":0},{"id":"16896493359","owner":"37571261@N05","secret":"56d5e548b5","server":"7718","farm":8,"title":"Blessed","ispublic":1,"isfriend":0,"isfamily":0},{"id":"15153527962","owner":"23073717@N07","secret":"5962047948","server":"5553","farm":6,"title":"the
+        still city","ispublic":1,"isfriend":0,"isfamily":0},{"id":"14827738014","owner":"87554350@N05","secret":"4099df5083","server":"3858","farm":4,"title":"Broncos
+        Country  Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"14575661419","owner":"64393488@N05","secret":"516ed3e3f9","server":"2919","farm":3,"title":"Denver
+        Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"13752632213","owner":"122341262@N02","secret":"7234543e9f","server":"3801","farm":4,"title":"_DSC5784-Edit.jpg","ispublic":1,"isfriend":0,"isfamily":0},{"id":"13571092524","owner":"31807718@N02","secret":"845596df96","server":"2938","farm":3,"title":"","ispublic":1,"isfriend":0,"isfamily":0},{"id":"9927130155","owner":"46605345@N07","secret":"13d41d3565","server":"7362","farm":8,"title":"","ispublic":1,"isfriend":0,"isfamily":0},{"id":"9149142342","owner":"98021133@N02","secret":"42aeee3c21","server":"3736","farm":4,"title":"IMG_0488b","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8999728699","owner":"51601723@N08","secret":"2890822f1a","server":"7425","farm":8,"title":"City
+        Park Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8917806354","owner":"51601723@N08","secret":"d2c81204de","server":"5456","farm":6,"title":"Denver
+        Skyline at Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8554206868","owner":"85246269@N08","secret":"c925347c63","server":"8388","farm":9,"title":"City
+        Park.","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8398289461","owner":"87782196@N08","secret":"3f788fbdca","server":"8219","farm":9,"title":"Highland
+        Bridge, Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8264747752","owner":"21551017@N04","secret":"135539bc81","server":"8480","farm":9,"title":"Denver
+        Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8225573353","owner":"23073717@N07","secret":"4156bc3352","server":"8345","farm":9,"title":"10-31-2012","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8207582330","owner":"66721363@N03","secret":"1f45e47a14","server":"8477","farm":9,"title":"West","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8207442854","owner":"66721363@N03","secret":"0b4d586cdd","server":"8345","farm":9,"title":"Sliver
+        #latergram","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8122288124","owner":"8357998@N04","secret":"98f7a32db3","server":"8043","farm":9,"title":"Sunset
+        over Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8117429947","owner":"9607676@N05","secret":"07f1bf8fbd","server":"8049","farm":9,"title":"Denver
+        Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8092655423","owner":"23073717@N07","secret":"936c65449b","server":"8053","farm":9,"title":"08-07-2012","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8071289145","owner":"66721363@N03","secret":"0c4772b1ed","server":"8041","farm":9,"title":"Belated
+        #marblemonday","ispublic":1,"isfriend":0,"isfamily":0},{"id":"8016801868","owner":"65164261@N06","secret":"9225c67b5d","server":"8457","farm":9,"title":"Denver
+        Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"7984572263","owner":"66721363@N03","secret":"e3623a1fe6","server":"8311","farm":9,"title":"I
+        love this city.","ispublic":1,"isfriend":0,"isfamily":0},{"id":"7984557327","owner":"66721363@N03","secret":"f1199985b3","server":"8032","farm":9,"title":"13th
+        Street","ispublic":1,"isfriend":0,"isfamily":0},{"id":"7953728262","owner":"66721363@N03","secret":"4d4a11ff1e","server":"8040","farm":9,"title":"Evening
+        view","ispublic":1,"isfriend":0,"isfamily":0},{"id":"7612736864","owner":"33198406@N07","secret":"896fba0b08","server":"8148","farm":9,"title":"Denver
+        Skyline Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"7414441170","owner":"50129868@N05","secret":"703ac41e7b","server":"5334","farm":6,"title":"Orange
+        Twilight","ispublic":1,"isfriend":0,"isfamily":0},{"id":"7368630620","owner":"16319213@N00","secret":"7bf88885f2","server":"7094","farm":8,"title":"Afterglow
+        - Denver Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"7314251188","owner":"46806857@N03","secret":"0493d35d7d","server":"7237","farm":8,"title":"Denver
+        City Park","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6654923585","owner":"38232982@N02","secret":"f49c411187","server":"7153","farm":8,"title":"Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6602776499","owner":"93851844@N00","secret":"23e1d7f4d7","server":"7157","farm":8,"title":"Denver
+        Sunset 6","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6602774731","owner":"93851844@N00","secret":"5dbd2bace6","server":"7031","farm":8,"title":"Denver
+        Sunset 5","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6602772759","owner":"93851844@N00","secret":"f93f016d6a","server":"7174","farm":8,"title":"Denver
+        Sunset 3","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6209496718","owner":"32482854@N02","secret":"2750e2d145","server":"6177","farm":7,"title":"Sunset
+        Over Denver II - [EXPLORE 10-3-11 #300]","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6199234800","owner":"32482854@N02","secret":"d3960a3641","server":"6152","farm":7,"title":"Sunset
+        Over Denver [EXPLORE #371 September 30, 2011]","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6108377851","owner":"30537244@N03","secret":"0d8d6b0b3d","server":"6202","farm":7,"title":"(nick
+        jordan) | assemble the skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6062246791","owner":"12414559@N02","secret":"39eb8c857d","server":"6184","farm":7,"title":"City
+        Park Fountain","ispublic":1,"isfriend":0,"isfamily":0},{"id":"6017790827","owner":"30537244@N03","secret":"0d40c6a7d3","server":"6018","farm":7,"title":"(
+        assemble the skyline )","ispublic":1,"isfriend":0,"isfamily":0},{"id":"5948495190","owner":"10192672@N00","secret":"d7b82faf49","server":"6012","farm":7,"title":"Electric
+        Sunset at City Park","ispublic":1,"isfriend":0,"isfamily":0},{"id":"5891370951","owner":"32742321@N06","secret":"b290560390","server":"5312","farm":6,"title":"Purple
+        Mountain Majesty","ispublic":1,"isfriend":0,"isfamily":0},{"id":"5755372133","owner":"26860832@N08","secret":"3f0bdc0a8e","server":"5183","farm":6,"title":"133\/365","ispublic":1,"isfriend":0,"isfamily":0},{"id":"5427382270","owner":"32742321@N06","secret":"eae67b722a","server":"5171","farm":6,"title":"Views
+        from the Mile High","ispublic":1,"isfriend":0,"isfamily":0},{"id":"5366987551","owner":"10193774@N03","secret":"c52921b3ea","server":"5010","farm":6,"title":"Denver
+        Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"5177769326","owner":"55888917@N03","secret":"b228432724","server":"1354","farm":2,"title":"Panorama
+        of Denver, Colorado","ispublic":1,"isfriend":0,"isfamily":0},{"id":"4993396885","owner":"48595217@N02","secret":"bf9239e884","server":"4148","farm":5,"title":"dtown","ispublic":1,"isfriend":0,"isfamily":0},{"id":"4981337793","owner":"71725992@N00","secret":"e741926b49","server":"4125","farm":5,"title":"all
+        things under the sun","ispublic":1,"isfriend":0,"isfamily":0},{"id":"5193565320","owner":"40408627@N07","secret":"b6ab4ef537","server":"4145","farm":5,"title":"Denver
+        Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"4801136348","owner":"71725992@N00","secret":"43d209a4f4","server":"4102","farm":5,"title":"interrupt
+        the sky","ispublic":1,"isfriend":0,"isfamily":0},{"id":"4058931202","owner":"74326106@N00","secret":"a950165c6b","server":"2486","farm":3,"title":"Downtown
+        Denver From City Of Cuernavaca Park","ispublic":1,"isfriend":0,"isfamily":0},{"id":"4006733589","owner":"91357526@N00","secret":"b135333c78","server":"2572","farm":3,"title":"Skyline
+        & Sunset, Denver, 18 Aug 2009","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3954048315","owner":"29941355@N04","secret":"56a926ea72","server":"3521","farm":4,"title":"Downtown
+        Denver Closeup at Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3817419163","owner":"21128887@N00","secret":"c5b447b98a","server":"2455","farm":3,"title":"Last
+        Kick","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3575134854","owner":"43436111@N00","secret":"60d2fe8609","server":"2458","farm":3,"title":"","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3457189878","owner":"62736719@N00","secret":"fd7596545a","server":"3545","farm":4,"title":"sunset
+        over the Denver Front Range","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3457184850","owner":"62736719@N00","secret":"ac2dd45d05","server":"3638","farm":4,"title":"downtown
+        Denver and the rockies at sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3456365109","owner":"62736719@N00","secret":"468af9f37b","server":"3551","farm":4,"title":"downtown
+        Denver and the rockies at sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3320434991","owner":"7956566@N06","secret":"d3709510c2","server":"3604","farm":4,"title":"dusk.","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3280444780","owner":"56594629@N00","secret":"f8a326686f","server":"3225","farm":4,"title":"Happy
+        Valentine''s Day","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3261067277","owner":"7956566@N06","secret":"f7e1b76cf0","server":"3527","farm":4,"title":"denver.","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3141010972","owner":"93174672@N00","secret":"5aedcb0515","server":"3286","farm":4,"title":"Tree,
+        Sunset, and part of Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3141010682","owner":"93174672@N00","secret":"a6dffe50c0","server":"3082","farm":4,"title":"Saturated
+        Sky over Denver, Colorado USA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3138599534","owner":"93174672@N00","secret":"48bbed8e96","server":"3250","farm":4,"title":"The
+        Warwick Denver on an Autumn Day","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3137771723","owner":"93174672@N00","secret":"dfd5b50c6b","server":"3227","farm":4,"title":"Gloomy
+        View Across the Parking Lot","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3115622504","owner":"93174672@N00","secret":"dbb38255f8","server":"3177","farm":4,"title":"MOSQUE
+        OF THE EL JEBEL SHRINE TEMPLE-1770 Sherman Street","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3079824535","owner":"93174672@N00","secret":"90f7d5ede3","server":"3063","farm":4,"title":"Sunsetting
+        Behind downtown Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3044530997","owner":"93174672@N00","secret":"66703426b6","server":"3244","farm":4,"title":"Night
+        Fall on Denver","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2738237856","owner":"93174672@N00","secret":"64f08df8a1","server":"3211","farm":4,"title":"The
+        \"DENVER FINANCIAL CENTER\"","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2735608900","owner":"93174672@N00","secret":"bb4dfe6cb4","server":"3004","farm":4,"title":"Top
+        of the Town''s New Tower","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2735608196","owner":"93174672@N00","secret":"0758350b52","server":"3055","farm":4,"title":"MCI
+        Building (Center)","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2735606476","owner":"93174672@N00","secret":"547e071532","server":"3152","farm":4,"title":"One
+        Lincoln Park: Denver, Colorado''s New Tower","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2735605714","owner":"93174672@N00","secret":"ea766a81a9","server":"3219","farm":4,"title":"View
+        of Denver''s \"Financial District\"","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2726168309","owner":"93174672@N00","secret":"805bf6a318","server":"3065","farm":4,"title":"Skyline
+        View of Downtown, Denver Colorado USA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2725672704","owner":"93174672@N00","secret":"5134853440","server":"3099","farm":4,"title":"Shorter
+        A.M.E. Church","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2725668918","owner":"93174672@N00","secret":"600539172d","server":"3231","farm":4,"title":"A
+        Dutch Colonial Revival House at Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2719352973","owner":"93174672@N00","secret":"5c526dc32e","server":"2318","farm":3,"title":"Cathedral
+        at Sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2717856894","owner":"93174672@N00","secret":"3485dba44c","server":"3074","farm":4,"title":"Dusk
+        View of Denver, Colorado","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2698156044","owner":"26185068@N03","secret":"75f78869a8","server":"3071","farm":4,"title":"Denver
+        Night Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2584258375","owner":"7589007@N08","secret":"0ef7c5fde4","server":"3027","farm":4,"title":"Train
+        Romance","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2584258343","owner":"7589007@N08","secret":"39d888d4a8","server":"3131","farm":4,"title":"The
+        Machines Have Risen","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2585086782","owner":"7589007@N08","secret":"260b576c89","server":"3098","farm":4,"title":"Tree
+        and Sky","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2585085780","owner":"7589007@N08","secret":"7850923c4f","server":"3096","farm":4,"title":"Tree
+        (by Loaf)","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2342517294","owner":"39278031@N00","secret":"a33e4bb07b","server":"2311","farm":3,"title":"Speed
+        of Light","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2256169684","owner":"93174672@N00","secret":"54284b9a60","server":"2141","farm":3,"title":"Amaryllis
+        on Setting Sunbathed Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2168000889","owner":"30607051@N00","secret":"635c3269a8","server":"2038","farm":3,"title":"sunset
+        over central street","ispublic":1,"isfriend":0,"isfamily":0},{"id":"1410473285","owner":"30607051@N00","secret":"f118ce3940","server":"1007","farm":2,"title":"a
+        new season''s sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"315521475","owner":"12651089@N00","secret":"46b0acfc71","server":"115","farm":1,"title":"Denver
+        Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"19345779","owner":"84916450@N00","secret":"58c6e3f2f4","server":"14","farm":1,"title":"Millenium
+        Bridge & Denver Skyline","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"})'
+    http_version: 
+  recorded_at: Tue, 26 Feb 2019 03:29:27 GMT
+- request:
+    method: get
+    uri: https://api.flickr.com/services/rest/?api_key=<FLICKR_API_KEY>&format=json&method=flickr.photos.getSizes&photo_id=44449423242&safe_search=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 26 Feb 2019 03:29:29 GMT
+      Content-Type:
+      - text/javascript; charset=utf-8
+      Content-Length:
+      - '483'
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www50.flickr.bf1.yahoo.com
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding
+      Age:
+      - '0'
+      Via:
+      - http/1.1 fts122.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
+        e29.ycpi.cha.yahoo.com (ApacheTrafficServer [cMsSf ])
+      Server:
+      - ATS
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=15552000
+      Expect-Ct:
+      - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Public-Key-Pins-Report-Only:
+      - max-age=2592000; pin-sha256="2fRAUXyxl4A1/XHrKNBmc8bTkzA7y4FB/GLJuNAzCqY=";
+        pin-sha256="I/Lt/z7ekCWanjD0Cvj5EqXls2lOaThEA0H2Bg4BT/o="; pin-sha256="Wd8xe/qfTwq3ylFNd3IpaqLHZbh2ZNCLluVzmeNkcpw=";
+        pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="; pin-sha256="i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY=";
+        pin-sha256="r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E="; pin-sha256="uUwZgwDOxcBXrQcntwu+kYFpkiVkOaezL0WYEZ3anJc=";
+        pin-sha256="dolnbtzEBnELx/9lOEQ22e6OZO/QNb6VSSX2XHA3E7A="; includeSubdomains;
+        report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-hpkp-report-only"
+    body:
+      encoding: ASCII-8BIT
+      string: jsonFlickrApi({"sizes":{"canblog":0,"canprint":0,"candownload":1,"size":[{"label":"Square","width":75,"height":75,"source":"https:\/\/farm2.staticflickr.com\/1857\/44449423242_6d94b83536_s.jpg","url":"https:\/\/www.flickr.com\/photos\/sammcox\/44449423242\/sizes\/sq\/","media":"photo"},{"label":"Large
+        Square","width":"150","height":"150","source":"https:\/\/farm2.staticflickr.com\/1857\/44449423242_6d94b83536_q.jpg","url":"https:\/\/www.flickr.com\/photos\/sammcox\/44449423242\/sizes\/q\/","media":"photo"},{"label":"Thumbnail","width":"100","height":"67","source":"https:\/\/farm2.staticflickr.com\/1857\/44449423242_6d94b83536_t.jpg","url":"https:\/\/www.flickr.com\/photos\/sammcox\/44449423242\/sizes\/t\/","media":"photo"},{"label":"Small","width":"240","height":"160","source":"https:\/\/farm2.staticflickr.com\/1857\/44449423242_6d94b83536_m.jpg","url":"https:\/\/www.flickr.com\/photos\/sammcox\/44449423242\/sizes\/s\/","media":"photo"},{"label":"Small
+        320","width":"320","height":213,"source":"https:\/\/farm2.staticflickr.com\/1857\/44449423242_6d94b83536_n.jpg","url":"https:\/\/www.flickr.com\/photos\/sammcox\/44449423242\/sizes\/n\/","media":"photo"},{"label":"Medium","width":"500","height":"333","source":"https:\/\/farm2.staticflickr.com\/1857\/44449423242_6d94b83536.jpg","url":"https:\/\/www.flickr.com\/photos\/sammcox\/44449423242\/sizes\/m\/","media":"photo"},{"label":"Medium
+        640","width":"640","height":"427","source":"https:\/\/farm2.staticflickr.com\/1857\/44449423242_6d94b83536_z.jpg","url":"https:\/\/www.flickr.com\/photos\/sammcox\/44449423242\/sizes\/z\/","media":"photo"},{"label":"Medium
+        800","width":"800","height":534,"source":"https:\/\/farm2.staticflickr.com\/1857\/44449423242_6d94b83536_c.jpg","url":"https:\/\/www.flickr.com\/photos\/sammcox\/44449423242\/sizes\/c\/","media":"photo"},{"label":"Large","width":"1024","height":"683","source":"https:\/\/farm2.staticflickr.com\/1857\/44449423242_6d94b83536_b.jpg","url":"https:\/\/www.flickr.com\/photos\/sammcox\/44449423242\/sizes\/l\/","media":"photo"},{"label":"Large
+        1600","width":"1600","height":1067,"source":"https:\/\/farm2.staticflickr.com\/1857\/44449423242_c80ac43824_h.jpg","url":"https:\/\/www.flickr.com\/photos\/sammcox\/44449423242\/sizes\/h\/","media":"photo"},{"label":"Large
+        2048","width":"2048","height":1365,"source":"https:\/\/farm2.staticflickr.com\/1857\/44449423242_b99812bcd2_k.jpg","url":"https:\/\/www.flickr.com\/photos\/sammcox\/44449423242\/sizes\/k\/","media":"photo"},{"label":"Original","width":"5706","height":"3804","source":"https:\/\/farm2.staticflickr.com\/1857\/44449423242_4cce3a0c3e_o.jpg","url":"https:\/\/www.flickr.com\/photos\/sammcox\/44449423242\/sizes\/o\/","media":"photo"}]},"stat":"ok"})
+    http_version: 
+  recorded_at: Tue, 26 Feb 2019 03:29:27 GMT
+recorded_with: VCR 4.0.0

@@ -14,7 +14,8 @@ class FlickrService
   end
 
   def find_picture_id
-    picture_data[:photos][:photo].sample[:id]
+    # picture_data[:photos][:photo].sample[:id]   # Makes VCR fail due to random image
+    picture_data[:photos][:photo][0][:id]
   end
 
   def find_picture_url

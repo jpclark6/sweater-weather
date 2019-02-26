@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       get '/forecast', to: 'forecasts#show', as: 'forecast'
       get '/backgrounds', to: 'images#show', as: 'image'
       get '/gifs', to: 'gifs#index', as: 'gifs'
+      post '/users', to: 'users#create'
     end
   end
 end

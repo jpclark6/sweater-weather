@@ -5,7 +5,8 @@ class GifFacade
   end
 
   def get_gif
-    random_image_data = search_results[:data].sample
+    # random_image_data = search_results[:data].sample    # Makes VCR fail due to random nature of it
+    random_image_data = search_results[:data][0]
     random_image_data[:images][:original][:url]
   end
 
