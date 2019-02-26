@@ -7,21 +7,22 @@ describe 'as a user' do
     api_key = 'abc123'
     user = User.create(email: email, password: password, api_key: api_key)
 
-    post "/api/v1/favorites?api_key=#{api_key}"
+    post "/api/v1/favorites?api_key=#{api_key}&location=Denver, CO"
 
     expect(response).to be_successful
     data = JSON.parse(response.body, symbolize_names: true)
-    
+    expect(data[:status]).to eq("Favorite added successfully")
+  end
+  it 'can not favorite locations with wrong api info' do
+    email = 'example@example.com'
+    password = 'password'
+    api_key = 'abc123'
+    user = User.create(email: email, password: password, api_key: "#{api_key}x")
 
-    POST /api/v1/favorites
-Content-Type: application/json
-Accept: application/json
+    post "/api/v1/favorites?api_key=#{api_key}&location=Denver, CO"
 
-body:
-
-{
-  "location": "Denver, CO", # If you decide to store cities in your database you can send an id if you prefer
-  "api_key": "jgn983hy48thw9begh98h4539h4"
-}
+    expect(response).to be_successful
+    data = JSON.parse(response.body, symbolize_names: true)
+    expect(data[:status]).to eq("Something went wrong.")
   end
 end
