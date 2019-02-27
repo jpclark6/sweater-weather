@@ -48,6 +48,7 @@ describe 'as a forecast facade' do
     expect(weather.humidity(1)).to be_between(0, 1.0).inclusive
     expect(weather.high(1)).to be_between(-10, 105).inclusive
     expect(weather.low(1)).to be_between(-10, 105).inclusive
+    expect(weather.icon(1)).to be_instance_of(String)
     
     expect(weather.status(2)).to be_instance_of(String)
     expect(weather.humidity(2)).to be_between(0, 1.0).inclusive

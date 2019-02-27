@@ -11,7 +11,8 @@ class Weather
       humidity: current_humidity,
       visibility: current_visibility_mi,
       uv_index: current_uv_index,
-      description: current_status
+      description: current_status, 
+      icon: current_icon
     }
   end
 
@@ -36,6 +37,7 @@ class Weather
                     status: status(day),
                     tonight_status: tonight_status(day),
                     humidity: humidity(day),
+                    icon: icon(day)
                    }
     end
     daily_forecast
@@ -69,6 +71,10 @@ class Weather
     currently[:time]
   end
 
+  def current_icon
+    currently[:icon]
+  end
+
   def hourly_time(hours_in_future = 0)
     hourly[:data][hours_in_future][:time]
   end
@@ -99,6 +105,10 @@ class Weather
 
   def humidity(days_in_future = 0)
     daily[:data][days_in_future][:humidity]
+  end
+
+  def icon(days_in_future = 0)
+    daily[:data][days_in_future][:icon]
   end
 
   private
