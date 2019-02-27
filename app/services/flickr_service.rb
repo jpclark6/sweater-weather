@@ -4,13 +4,11 @@ class FlickrService
     @city_state = city_state
     @lat = geo.lat
     @lng = geo.lng
-    @_cached_city = nil
   end
 
   def picture_data
     params = {lat: @lat, lon: @lng, accuracy: 11, tags: 'skyline,sunset',
               method: 'flickr.photos.search', tag_mode: 'all'}
-
     get_json('', params)
   end
 
@@ -21,23 +19,27 @@ class FlickrService
 
   def find_picture_url
     if cached_city && cached_city.background_url
-      url = cached_city.background_url
+      cached_city.background_url
     else
-      loc = Location.find_or_create_by(city_state: @city_state)
-      params = {method: 'flickr.photos.getSizes', photo_id: find_picture_id}
-      url = ''
-      until url[-3..-1] == 'jpg'
-        url = get_json('', params)[:sizes][:size][-1][:source]
-      end
-      loc.update(background_url: url)
+      find_and_update_url
     end
-    url
   end
 
   private
 
+  def find_and_update_url
+    loc = Location.find_or_create_by(city_state: @city_state)
+    params = {method: 'flickr.photos.getSizes', photo_id: find_picture_id}
+    url = ''
+    until url[-3..-1] == 'jpg'
+      url = get_json('', params)[:sizes][:size][-1][:source]
+    end
+    loc.update(background_url: url)
+    url
+  end
+
   def cached_city
-    @_cached_city ||= Location.find_by(city_state: @city_state)
+    Location.find_by(city_state: @city_state)
   end
 
   def get_json(url, params)

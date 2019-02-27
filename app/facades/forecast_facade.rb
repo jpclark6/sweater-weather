@@ -8,7 +8,7 @@ class ForecastFacade
     if weather_data_exists?
       Weather.new(saved_search_result)
     else
-      WeatherLog.create(lat_lng: @lat_lng, data: search_result.to_json)
+      WeatherLog.find_or_create_by(lat_lng: @lat_lng).update(data: search_result.to_json)
       Weather.new(search_result)
     end
   end
@@ -17,7 +17,7 @@ class ForecastFacade
 
   def weather_data_exists?
     weather = WeatherLog.find_by(lat_lng: @lat_lng)
-    if weather && weather.updated_at < 4.hours.ago
+    if weather && weather.updated_at < 4.hours.from_now
       weather
     else
       false

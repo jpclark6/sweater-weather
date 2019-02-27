@@ -2,7 +2,8 @@ class GeocodeFacade
   def initialize(city_state)
     @city_state = city_state
     @_search_result = nil
-    @_find_city = nil
+    @_cached_city = nil
+    @_cache_city = nil
   end
 
   def lat_lng
@@ -13,9 +14,8 @@ class GeocodeFacade
     if cached_city && cached_city.lat
       cached_city.lat
     else
-      loc = Location.find_or_create_by(city_state: @city_state)
-      loc.update(lat: location[:lat])
-      loc.lat
+      cache_city.update(lat: location[:lat])
+      cache_city.lat
     end
   end
 
@@ -23,9 +23,8 @@ class GeocodeFacade
     if cached_city && cached_city.lng
       cached_city.lng
     else
-      loc = Location.find_or_create_by(city_state: @city_state)
-      loc.update(lng: location[:lng])
-      loc.lng
+      cache_city.update(lng: location[:lng])
+      cache_city.lng
     end
   end
 
@@ -35,8 +34,12 @@ class GeocodeFacade
 
   private
 
+  def cache_city
+    @_cache_city ||= Location.find_or_create_by(city_state: @city_state)
+  end
+
   def cached_city
-    @_find_city ||= Location.find_by(city_state: @city_state)
+    @_cached_city ||= Location.find_by(city_state: @city_state)
   end
 
   def search_result

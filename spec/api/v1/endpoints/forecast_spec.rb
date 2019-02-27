@@ -13,4 +13,11 @@ describe 'as a visitor' do
     expect(data[:data][:daily][0].keys).to eq([:time, :high, :low, :status, :tonight_status, :humidity])
     expect(data[:data][:daily][6].keys).to eq([:time, :high, :low, :status, :tonight_status, :humidity])
   end
+  
+  it 'can cache a successful call to the forecast endpoint', :vcr do
+    get '/api/v1/forecast', params: {location: "denver,co"}
+    get '/api/v1/forecast', params: {location: "denver,co"}
+    
+    expect(WeatherLog.last).to_not eq(nil)
+  end
 end
