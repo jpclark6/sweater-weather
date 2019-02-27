@@ -29,7 +29,11 @@ class GeocodeFacade
   end
 
   def location
-    search_result[:results][0][:geometry][:location]
+    unless search_result[:results].empty?
+      search_result[:results][0][:geometry][:location]
+    else
+      {lat: 39.7392358, lng: -104.990251}
+    end
   end
 
   private

@@ -35,4 +35,11 @@ describe 'flickr service' do
     url_2 = flickr.find_picture_url
     expect(url_1).to eq(url_2)
   end
+
+  it 'does not break with bad city name', :vcr do
+    city_state = 'asdfsdat'
+    flickr = FlickrService.new(city_state)
+    url = flickr.find_picture_url
+    expect(url).to eq("https://farm2.staticflickr.com/1857/44449423242_4cce3a0c3e_o.jpg")
+  end
 end

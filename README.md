@@ -1,9 +1,7 @@
-# README
+# Sweater Weather API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sweater weather API can be used to get weather data for a location, along with images for that city and weather related gifs. It can also create users in the database and let them create, read, update, and destroy favorite cities.
 
-Things you may want to cover:
 
 * Ruby version
 
