@@ -21,7 +21,8 @@ class Weather
     24.times do |hour|
       hourly_forecast[hour] = {
                                 time: hourly_time(hour),
-                                temperature: hourly_temperature(hour)
+                                temperature: hourly_temperature(hour),
+                                icon: hourly_icon(hour)
                               }
     end
     hourly_forecast
@@ -81,6 +82,10 @@ class Weather
 
   def hourly_temperature(hours_in_future = 0)
     hourly[:data][hours_in_future][:temperature]
+  end
+
+  def hourly_icon(hours_in_future = 0)
+    hourly[:data][hours_in_future][:icon]
   end
 
   def daily_time(days_in_future = 0)
