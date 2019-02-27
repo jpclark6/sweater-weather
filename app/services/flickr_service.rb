@@ -9,7 +9,6 @@ class FlickrService
   def picture_data
     params = {lat: @lat, lon: @lng, accuracy: 11, tags: 'skyline,sunset',
               method: 'flickr.photos.search', tag_mode: 'all'}
-
     get_json('', params)
   end
 
@@ -19,22 +18,29 @@ class FlickrService
   end
 
   def find_picture_url
-    if Location.find_by(city_state: @city_state) && Location.find_by(city_state: @city_state).background_url
-      url = Location.find_by(city_state: @city_state).background_url
+    if cached_city && cached_city.background_url
+      cached_city.background_url
     else
-      loc = Location.find_or_create_by(city_state: @city_state)
-      params = {method: 'flickr.photos.getSizes', photo_id: find_picture_id}
-      url = ''
-      until url[-3..-1] == 'jpg'
-        url = get_json('', params)[:sizes][:size][-1][:source]
-      end
-      loc.update(background_url: url)
+      find_and_update_url
     end
+  end
+
+  private
+
+  def find_and_update_url
+    loc = Location.find_or_create_by(city_state: @city_state)
+    params = {method: 'flickr.photos.getSizes', photo_id: find_picture_id}
+    url = ''
+    until url[-3..-1] == 'jpg'
+      url = get_json('', params)[:sizes][:size][-1][:source]
+    end
+    loc.update(background_url: url)
     url
   end
 
-
-  private
+  def cached_city
+    Location.find_by(city_state: @city_state)
+  end
 
   def get_json(url, params)
     response = conn.get(url, params)

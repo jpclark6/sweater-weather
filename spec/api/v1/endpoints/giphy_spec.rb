@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'getting giphy weather json' do
   it 'can send an api request and get gifs based on the weather as a response', :vcr do
-    get '/api/v1/gifs?location=denver,co'
+    get '/api/v1/gifs', params: {location: "denver,co"}
 
     expect(response).to be_successful
 
@@ -24,7 +24,7 @@ describe 'getting giphy weather json' do
   end
 
   it 'can send an api request of another city and get gifs based on the weather as a response', :vcr do
-    get '/api/v1/gifs?location=miami,fl'
+    get '/api/v1/gifs', params: {location: "miami,fl"}
 
     expect(response).to be_successful
 
