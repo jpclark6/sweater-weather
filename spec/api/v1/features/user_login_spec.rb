@@ -6,7 +6,7 @@ describe 'as a registered user' do
     password = 'password'
     api_key = 'abc123'
     user = User.create(email: email, password: password, api_key: api_key)
-    post "/api/v1/sessions?email=#{email}&password=#{password}"
+    post "/api/v1/sessions", params: {email: email, password: password}
 
     expect(response).to be_successful
     expect(status).to eq(200)
