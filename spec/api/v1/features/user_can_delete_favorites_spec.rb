@@ -6,10 +6,10 @@ describe 'as a user' do
     password = 'password'
     api_key = 'abc123'
     user = User.create(email: email, password: password, api_key: api_key)
-    post "/api/v1/favorites?api_key=#{api_key}&location=Denver, CO"
-    post "/api/v1/favorites?api_key=#{api_key}&location=Miami, FL"
+    post "/api/v1/favorites", params: {api_key: api_key, location: "Denver, CO"}
+    post "/api/v1/favorites", params: {api_key: api_key, location: "Miami, FL"}
 
-    delete "/api/v1/favorites?api_key=#{api_key}&location=Denver, CO"
+    delete "/api/v1/favorites", params: {api_key: api_key, location: "Denver, CO"}
 
     expect(response).to be_successful
     data = JSON.parse(response.body, symbolize_names: true)
@@ -24,10 +24,10 @@ describe 'as a user' do
     password = 'password'
     api_key = 'abc123'
     user = User.create(email: email, password: password, api_key: api_key)
-    post "/api/v1/favorites?api_key=#{api_key}&location=Denver, CO"
-    post "/api/v1/favorites?api_key=#{api_key}&location=Miami, FL"
+    post "/api/v1/favorites", params: {api_key: api_key, location: "Denver, CO"}
+    post "/api/v1/favorites", params: {api_key: api_key, location: "Miami, FL"}
 
-    delete "/api/v1/favorites?api_key=#{api_key}x&location=Denver, CO"
+    delete "/api/v1/favorites", params: {api_key: 'notabc123', location: "Denver, CO"}
 
     expect(status).to eq(401)
     data = JSON.parse(response.body, symbolize_names: true)
@@ -39,10 +39,10 @@ describe 'as a user' do
     password = 'password'
     api_key = 'abc123'
     user = User.create(email: email, password: password, api_key: api_key)
-    post "/api/v1/favorites?api_key=#{api_key}&location=Denver, CO"
-    post "/api/v1/favorites?api_key=#{api_key}&location=Miami, FL"
+    post "/api/v1/favorites", params: {api_key: api_key, location: "Denver, CO"}
+    post "/api/v1/favorites", params: {api_key: api_key, location: "Miami, FL"}
 
-    delete "/api/v1/favorites?location=Denver, CO"
+    delete "/api/v1/favorites", params: {location: "Denver, CO"}
 
     expect(status).to eq(401)
     data = JSON.parse(response.body, symbolize_names: true)
@@ -54,10 +54,10 @@ describe 'as a user' do
     password = 'password'
     api_key = 'abc123'
     user = User.create(email: email, password: password, api_key: api_key)
-    post "/api/v1/favorites?api_key=#{api_key}&location=Denver, CO"
-    post "/api/v1/favorites?api_key=#{api_key}&location=Miami, FL"
+    post "/api/v1/favorites", params: {api_key: api_key, location: "Denver, CO"}
+    post "/api/v1/favorites", params: {api_key: api_key, location: "Miami, FL"}
 
-    delete "/api/v1/favorites?api_key=#{api_key}x&location=Nowhere, CO"
+    delete "/api/v1/favorites", params: {api_key: api_key, location: "Nowhere, CO"}
 
     expect(status).to eq(401)
     data = JSON.parse(response.body, symbolize_names: true)
