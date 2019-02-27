@@ -21,9 +21,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 25 Feb 2019 18:48:27 GMT
+      - Wed, 27 Feb 2019 00:29:59 GMT
       Expires:
-      - Tue, 26 Feb 2019 18:48:27 GMT
+      - Thu, 28 Feb 2019 00:29:59 GMT
       Cache-Control:
       - public, max-age=86400
       Vary:
@@ -39,7 +39,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=33
+      - gfet4t7; dur=9
       Alt-Svc:
       - quic=":443"; ma=2592000; v="44,43,39"
     body:
@@ -105,113 +105,7 @@ http_interactions:
            "status" : "OK"
         }
     http_version: 
-  recorded_at: Mon, 25 Feb 2019 18:48:24 GMT
-- request:
-    method: get
-    uri: https://maps.googleapis.com/maps/api/geocode/json?address=denver,co&key=<GOOGLE_API_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.15.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Mon, 25 Feb 2019 18:48:27 GMT
-      Expires:
-      - Tue, 26 Feb 2019 18:48:27 GMT
-      Cache-Control:
-      - public, max-age=86400
-      Vary:
-      - Accept-Language
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - mafe
-      Content-Length:
-      - '448'
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Frame-Options:
-      - SAMEORIGIN
-      Server-Timing:
-      - gfet4t7; dur=14
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="44,43,39"
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {
-           "results" : [
-              {
-                 "address_components" : [
-                    {
-                       "long_name" : "Denver",
-                       "short_name" : "Denver",
-                       "types" : [ "locality", "political" ]
-                    },
-                    {
-                       "long_name" : "Denver County",
-                       "short_name" : "Denver County",
-                       "types" : [ "administrative_area_level_2", "political" ]
-                    },
-                    {
-                       "long_name" : "Colorado",
-                       "short_name" : "CO",
-                       "types" : [ "administrative_area_level_1", "political" ]
-                    },
-                    {
-                       "long_name" : "United States",
-                       "short_name" : "US",
-                       "types" : [ "country", "political" ]
-                    }
-                 ],
-                 "formatted_address" : "Denver, CO, USA",
-                 "geometry" : {
-                    "bounds" : {
-                       "northeast" : {
-                          "lat" : 39.91424689999999,
-                          "lng" : -104.6002959
-                       },
-                       "southwest" : {
-                          "lat" : 39.614431,
-                          "lng" : -105.109927
-                       }
-                    },
-                    "location" : {
-                       "lat" : 39.7392358,
-                       "lng" : -104.990251
-                    },
-                    "location_type" : "APPROXIMATE",
-                    "viewport" : {
-                       "northeast" : {
-                          "lat" : 39.91424689999999,
-                          "lng" : -104.6002959
-                       },
-                       "southwest" : {
-                          "lat" : 39.614431,
-                          "lng" : -105.109927
-                       }
-                    }
-                 },
-                 "place_id" : "ChIJzxcfI6qAa4cR1jaKJ_j0jhE",
-                 "types" : [ "locality", "political" ]
-              }
-           ],
-           "status" : "OK"
-        }
-    http_version: 
-  recorded_at: Mon, 25 Feb 2019 18:48:24 GMT
+  recorded_at: Wed, 27 Feb 2019 00:29:58 GMT
 - request:
     method: get
     uri: https://api.flickr.com/services/rest/?accuracy=11&api_key=<FLICKR_API_KEY>&format=json&lat=39.7392358&lon=-104.990251&method=flickr.photos.search&safe_search=1&tag_mode=all&tags=skyline,sunset
@@ -231,11 +125,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 25 Feb 2019 18:48:27 GMT
+      - Wed, 27 Feb 2019 00:29:59 GMT
       Content-Type:
       - text/javascript; charset=utf-8
       Content-Length:
-      - '4319'
+      - '4322'
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
@@ -243,7 +137,7 @@ http_interactions:
       Cache-Control:
       - private
       X-Served-By:
-      - www322.flickr.bf1.yahoo.com
+      - www245.flickr.bf1.yahoo.com
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
@@ -251,8 +145,8 @@ http_interactions:
       Age:
       - '0'
       Via:
-      - http/1.1 fts114.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
-        e9.ycpi.cha.yahoo.com (ApacheTrafficServer [cMsSf ])
+      - http/1.1 fts117.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
+        e5.ycpi.dnb.yahoo.com (ApacheTrafficServer [cMsSf ])
       Server:
       - ATS
       Referrer-Policy:
@@ -368,13 +262,13 @@ http_interactions:
         Romance","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2584258343","owner":"7589007@N08","secret":"39d888d4a8","server":"3131","farm":4,"title":"The
         Machines Have Risen","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2585086782","owner":"7589007@N08","secret":"260b576c89","server":"3098","farm":4,"title":"Tree
         and Sky","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2585085780","owner":"7589007@N08","secret":"7850923c4f","server":"3096","farm":4,"title":"Tree
-        (by Loaf)","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2342517294","owner":"39278031@N00","secret":"a33e4bb07b","server":"2311","farm":3,"title":"Speed
-        of Light","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2256169684","owner":"93174672@N00","secret":"54284b9a60","server":"2141","farm":3,"title":"Amaryllis
+        (by Loaf)","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2256169684","owner":"93174672@N00","secret":"54284b9a60","server":"2141","farm":3,"title":"Amaryllis
         on Setting Sunbathed Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2168000889","owner":"30607051@N00","secret":"635c3269a8","server":"2038","farm":3,"title":"sunset
         over central street","ispublic":1,"isfriend":0,"isfamily":0},{"id":"1410473285","owner":"30607051@N00","secret":"f118ce3940","server":"1007","farm":2,"title":"a
         new season''s sunset","ispublic":1,"isfriend":0,"isfamily":0},{"id":"315521475","owner":"12651089@N00","secret":"46b0acfc71","server":"115","farm":1,"title":"Denver
         Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"19345779","owner":"84916450@N00","secret":"58c6e3f2f4","server":"14","farm":1,"title":"Millenium
-        Bridge & Denver Skyline","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"})'
+        Bridge & Denver Skyline","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2342517294","owner":"39278031@N00","secret":"a33e4bb07b","server":"2311","farm":3,"title":"Speed
+        of Light","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"})'
     http_version: 
-  recorded_at: Mon, 25 Feb 2019 18:48:25 GMT
+  recorded_at: Wed, 27 Feb 2019 00:29:58 GMT
 recorded_with: VCR 4.0.0

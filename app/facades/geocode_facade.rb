@@ -29,7 +29,7 @@ class GeocodeFacade
   end
 
   def location
-    service.lat_lng[:results][0][:geometry][:location]
+    search_result[:results][0][:geometry][:location]
   end
 
   private
