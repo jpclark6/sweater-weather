@@ -4,6 +4,7 @@ class FlickrService
     @city_state = city_state
     @lat = geo.lat
     @lng = geo.lng
+    @_cached_city = nil
   end
 
   def picture_data
@@ -19,8 +20,8 @@ class FlickrService
   end
 
   def find_picture_url
-    if Location.find_by(city_state: @city_state) && Location.find_by(city_state: @city_state).background_url
-      url = Location.find_by(city_state: @city_state).background_url
+    if cached_city && cached_city.background_url
+      url = cached_city.background_url
     else
       loc = Location.find_or_create_by(city_state: @city_state)
       params = {method: 'flickr.photos.getSizes', photo_id: find_picture_id}
@@ -33,8 +34,11 @@ class FlickrService
     url
   end
 
-
   private
+
+  def cached_city
+    @_cached_city ||= Location.find_by(city_state: @city_state)
+  end
 
   def get_json(url, params)
     response = conn.get(url, params)
