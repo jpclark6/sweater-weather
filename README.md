@@ -5,13 +5,19 @@ Sweater weather API can be used to get weather data for a location, along with i
 It is base url is currently hosted at [Sweater Weather](https://sweater-weather-1810.herokuapp.com). Add an endpoint to see functionality.
 
 Example endpoints:
-Weater forecast for city - [GET '/api/v1/forecast?location=denver,co'](https://sweater-weather-1810.herokuapp.com/api/v1/forecast?location=denver,co)
-Background image for city - [GET '/api/v1/forecast?backgrounds=denver,co'](https://sweater-weather-1810.herokuapp.com/api/v1/forecast?backgrounds=denver,co)
-Create user - POST '/api/v1/users?email=joe@example.com&password=password&password_confirmation=password' returns api_key
-Login - POST '/api/v1/sessions?email=joe@example.com&password=password' returns api_key
-Add favorite location - POST '/api/v1/favorites?location=denver,co&api_key=a4a22ffd24c'
-List favorite locations - GET '/api/v1/favorites?api_key=a4a22ffd24c'
-Removing favorite location - DELETE '/api/v1/favorites?location=denver,co&api_key=a4a22ffd24c'
+* Weater forecast for city - [GET '/api/v1/forecast?location=denver,co'](https://sweater-weather-1810.herokuapp.com/api/v1/forecast?location=denver,co)
+
+* Background image for city - [GET '/api/v1/forecast?backgrounds=denver,co'](https://sweater-weather-1810.herokuapp.com/api/v1/forecast?backgrounds=denver,co)
+
+* Create user - POST '/api/v1/users?email=joe@example.com&password=password&password_confirmation=password' returns api_key
+
+* Login - POST '/api/v1/sessions?email=joe@example.com&password=password' returns api_key
+
+* Add favorite location - POST '/api/v1/favorites?location=denver,co&api_key=a4a22ffd24c'
+
+* List favorite locations - GET '/api/v1/favorites?api_key=a4a22ffd24c'
+
+* Removing favorite location - DELETE '/api/v1/favorites?location=denver,co&api_key=a4a22ffd24c'
 
 ## Prerequisites
 
