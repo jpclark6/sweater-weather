@@ -2,6 +2,8 @@
 
 Sweater weather API can be used to get weather data for a location, along with images for that city and weather related gifs. It can also create users in the database and let them create, read, update, and destroy favorite cities.
 
+A front end was created and can be found [here](https://sweater-weather-1810.surge.sh) for the deployed version, or [here](https://github.com/jpclark6/sweater-weather-fe) for the github repo.
+
 It is base url is currently hosted at [Sweater Weather](https://sweater-weather-1810.herokuapp.com). Add an endpoint to see functionality.
 
 Example endpoints:
